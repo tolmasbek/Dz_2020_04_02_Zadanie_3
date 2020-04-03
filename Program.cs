@@ -63,7 +63,7 @@ namespace dz_zadanie_3
             public void Show()
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                System.Console.WriteLine($"Content: {this.nameContent}");   
+                System.Console.WriteLine($"Content: {this.nameContent}");   //
             }
         }
     }
