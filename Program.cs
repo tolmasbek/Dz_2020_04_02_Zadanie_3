@@ -17,13 +17,39 @@ namespace dz_zadanie_3
              *          книги, имя автора и содержание.
              */
 
+            string text1, text2, text3;
+                System.Console.Write("Enter book title: ");
+            text1 = Console.ReadLine();
+                System.Console.Write("Enter the author of the book: ");
+            text2 = Console.ReadLine();
+                System.Console.Write("Enter content book: ");
+            text3 = Console.ReadLine();
+
+            Book newBook = new Book(text1, text2, text3);   // Создание экземпляра класса  по сильной ссылке
+                newBook.Show();                             // Метдо Show вызывается из класса Book                
             
             Console.ReadKey();
         }
 
-        class Book                                          // Класс Book                                     
-        {  
-                          
+        class Book                                                      // Класс Book                                     
+        {           
+            private Title title;                                        // поле title типа класса Title                    
+            private Author author;                                      // поле author типа класса Author
+            private Content content;                                    // поле content типа класса Content
+
+            public Book(string title, string author, string content)    // Перегруженный конструктор класса Book
+            {
+                this.title = new Title(title);                          // инициализируется поле title
+                this.author = new Author(author);                       // инициализируется поле author
+                this.content = new Content(content);                    // инициализируется поле content
+            }
+
+            public void Show()              // Метод show
+            {
+                title.Show();               // Метдо Show вызывается из класса Title
+                author.Show();              // Метдо Show вызывается из класса Author
+                content.Show();             // Метдо Show вызывается из класса Content
+            }
         }
 
         class Title                                         // Класс Title
