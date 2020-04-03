@@ -17,82 +17,52 @@ namespace dz_zadanie_3
              *          книги, имя автора и содержание.
              */
 
-            Book newb = new Book();    
-            newb.Show();
             
             Console.ReadKey();
         }
 
-        class Book
-        {
-            private string NameBook { get; set; }
-            Book (string NameBook)
-            {
-                this.NameBook = NameBook;
-            }
-            public void Show()
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                System.Console.WriteLine($"Book: {this.NameBook}");   
-            }
-            public string getName()
-            {
-                return this.NameBook;
-            }
-            Book ()
-            {
-
-            }   
+        class Book                                      
+        {  
+                          
         }
+
         class Title
         {
-            private string NameTitle { get; set; }
-            Title (string NameTitle)
+            private string nameTitle { get; set; }      
+            public Title (string nameTitle)              
             {
-                this.NameTitle = NameTitle;
-            }
-            Title()
-            {
-
+                this.nameTitle = nameTitle;             
             }
             public void Show()
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                System.Console.WriteLine($"Title: {this.NameTitle}");   
+                System.Console.WriteLine($"Title: {this.nameTitle}");   
             }
         }
         class Author
         {
-            private string NameAuthor { get; set; }
-            Author (string NameAuthor)
+            private string nameAuthor { get; set; }
+            public Author (string nameAuthor)
             {
-                this.NameAuthor = NameAuthor;
-            }
-            Author()
-            {
-
+                this.nameAuthor = nameAuthor;
             }
             public void Show()
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                System.Console.WriteLine($"Author: {this.NameAuthor}");   
+                System.Console.WriteLine($"Author: {this.nameAuthor}");   
             }
         }
         class Content
         {
-            private string NameContent { get; set; }
-            Content (string NameContent)
+            private string nameContent { get; set; }
+            public Content (string nameContent)
             {
-                this.NameContent = NameContent;
-            }
-            Content()
-            {
-
+                this.nameContent = nameContent;
             }
             public void Show()
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                System.Console.WriteLine($"Content: {this.NameContent}");   
+                System.Console.WriteLine($"Content: {this.nameContent}");   
             }
         }
     }
