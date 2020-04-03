@@ -21,22 +21,22 @@ namespace dz_zadanie_3
             Console.ReadKey();
         }
 
-        class Book                                      
+        class Book                                          // Класс Book                                     
         {  
                           
         }
 
-        class Title
+        class Title                                         // Класс Title
         {
-            private string nameTitle { get; set; }      
-            public Title (string nameTitle)              
+            private string nameTitle { get; set; }          // Поле класса Title со свойством чтения и записи
+            public Title (string nameTitle)                 // Перегруженный конструктор класса Title 
             {
-                this.nameTitle = nameTitle;             
+                this.nameTitle = nameTitle;                 
             }
-            public void Show()
+            public void Show()                                          // Метод show()
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                System.Console.WriteLine($"Title: {this.nameTitle}");   
+                Console.ForegroundColor = ConsoleColor.Yellow;          // Цвет текста в консоли
+                System.Console.WriteLine($"Title: {this.nameTitle}");   // Вывод значение поля 
             }
         }
         class Author
