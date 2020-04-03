@@ -58,6 +58,7 @@ namespace dz_zadanie_3
             public Content (string nameContent)
             {
                 this.nameContent = nameContent;
+                // это конструктор
             }
             public void Show()
             {
